@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <style>
+    
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #87CEFA, #4682B4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+.form-section {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.form-section h2 {
+    color: #4682B4;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+
+.travel-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.travel-form label {
+    font-weight: bold;
+    color: #4682B4;
+    text-align: left;
+    margin-left: 5px;
+}
+
+
+.travel-form input[type="text"],
+.travel-form input[type="email"],
+.travel-form input[type="date"],
+.travel-form input[type="number"],
+.travel-form select,
+.travel-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #87CEEB;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #f0f8ff;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+.travel-form input:focus,
+.travel-form select:focus,
+.travel-form textarea:focus {
+    border-color: #4682B4;
+    outline: none;
+}
+
+
+.travel-form textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+
+.submit-button {
+    padding: 12px 20px;
+    background-color: #4682B4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #315f7a;
+    transform: scale(1.05);
+}
+
+  </style>
+<section id="travel-form" class="form-section">
+    <h2>Plan Your Dream Vacation</h2>
+    <form action="#" method="post" class="travel-form">
+        
+        
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        
+        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+        
+        <label for="destination">Select Destination:</label>
+        <select id="destination" name="destination" required>
+            <option value="" disabled selected>Select your destination</option>
+            <option value="europe">Europe</option>
+            <option value="asia">Asia</option>
+            <option value="maldives">Maldives</option>
+            <option value="australia">Australia</option>
+            <option value="africa">Africa</option>
+        </select>
+        
+        
+        <label for="start-date">Start Date:</label>
+        <input type="date" id="start-date" name="start-date" required>
+
+        <label for="end-date">End Date:</label>
+        <input type="date" id="end-date" name="end-date" required>
+        
+        
+        <label for="travelers">Number of Travelers:</label>
+        <input type="number" id="travelers" name="travelers" min="1" max="10" placeholder="Enter number of travelers" required>
+        
+      
+        <label for="package-type">Package Type:</label>
+        <select id="package-type" name="package-type" required>
+            <option value="" disabled selected>Select package type</option>
+            <option value="adventure">Adventure</option>
+            <option value="beach">Beach Getaway</option> 
+            <option value="cultural">Cultural Experience</option>
+            <option value="luxury">Luxury Escape</option>
+        </select>
+        
+        
+        <label for="requests">Special Requests:</label>
+        <textarea id="requests" name="requests" placeholder="Enter any special requests (e.g., vegan meals, wheelchair access)"></textarea>
+        
+        
+        <button type="submit" class="submit-button">Submit</button>
+    </form>
+</section>
+  
+</body>
+</html>
